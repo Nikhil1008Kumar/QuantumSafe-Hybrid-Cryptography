@@ -1,0 +1,11 @@
+scenario,variant,n_trials,hybrid_count,pqc_only_count,abort_count,hybrid_pct,hybrid_wilson_95_low_pct,hybrid_wilson_95_high_pct,median_signed_frames,median_on_wire_bytes,median_elapsed_ms,dominant_qkd_status
+clean_preferred,adaptive_p8,10,10,0,0,100.0,72.247,100.0,41.0,234475.0,3402.735,MODEL_ACCEPT
+clean_preferred,fixed_p9,10,10,0,0,100.0,72.247,100.0,31.0,180423.0,2670.517,MODEL_ACCEPT
+noise1_preferred,adaptive_p8,10,2,8,0,20.0,5.668,50.984,62.0,339276.5,4977.438,ABORT_VERIFICATION
+noise1_preferred,fixed_p9,10,2,8,0,20.0,5.668,50.984,30.0,174151.0,2585.979,ABORT_VERIFICATION
+noise3_preferred,adaptive_p8,10,0,10,0,0.0,0.0,27.753,72.0,396979.0,5654.656,ABORT_VERIFICATION
+noise3_preferred,fixed_p9,10,0,10,0,0.0,0.0,27.753,30.0,174152.0,2583.746,ABORT_VERIFICATION
+eve20_preferred,adaptive_p8,10,0,10,0,0.0,0.0,27.753,24.0,143380.5,2091.792,ABORT_PARAMETER_ESTIMATION
+eve20_preferred,fixed_p9,10,0,10,0,0.0,0.0,27.753,24.0,143452.5,2101.88,ABORT_PARAMETER_ESTIMATION
+short_required,adaptive_p8,10,0,0,10,0.0,0.0,27.753,20.0,96446.0,1827.577,ABORT_FINITE_KEY
+short_required,fixed_p9,10,0,0,10,0.0,0.0,27.753,18.0,86972.0,1677.963,ABORT_EC_BUDGET

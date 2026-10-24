@@ -1,0 +1,17 @@
+attack_stage,attempts,exercised,rejected
+policy_offer,3,3,3
+bob_detected,3,3,3
+bob_basis,3,3,3
+alice_basis,3,3,3
+sampling_seed,3,3,3
+alice_test_bits,3,3,3
+bob_test_bits,3,3,3
+ec_seed,3,3,3
+ec_batch,3,3,3
+verification_seed,3,3,3
+alice_verification_tag,3,3,3
+bob_verification_tag,3,3,3
+privacy_amplification_seed,3,3,3
+qkd_report_alice,3,3,3
+mode_decision,3,3,3
+mode_ack,3,3,3

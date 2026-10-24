@@ -1,0 +1,18 @@
+{
+  "study": "Program 2 finite-key BB84 simulated baseline",
+  "base_seed": 20261024,
+  "repetitions": 20,
+  "reference": "Tomamichel et al, Nature Communications 3:634 (2012), Eq. (2)",
+  "q_tolerance": 0.04,
+  "ec_leakage_cap_fraction": 0.4,
+  "public_reconciliation_messages_per_parity_query": 2,
+  "eps_secrecy": 1e-10,
+  "eps_correctness": 1e-10,
+  "finite_key_ideal_source_quality": 1,
+  "simulator_not_hardware": true,
+  "classical_channel_assumed_authenticated": true,
+  "random_generator": "numpy.default_rng seeded (not cryptographically secure)",
+  "numpy": "2.4.6",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0"
+}

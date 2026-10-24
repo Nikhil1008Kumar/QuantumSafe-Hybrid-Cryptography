@@ -1,0 +1,94 @@
+{
+  "program": "10",
+  "created_utc": "2026-10-24T08:56:56.024947+00:00",
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "openssl": "not run",
+  "master_seed": 20261024,
+  "n_per_scenario": 500,
+  "n_integration_pairs_per_scenario": 0,
+  "bootstrap_draws": 1000,
+  "design": "Predeclared 10 QKD conditions; 2 enforced policies; 4 paired strategy decisions",
+  "scenario_specs": [
+    {
+      "name": "short_500_clean",
+      "signals": 500,
+      "noise": 0.0,
+      "interception": 0.0,
+      "loss": 0.0
+    },
+    {
+      "name": "small_10000_clean",
+      "signals": 10000,
+      "noise": 0.0,
+      "interception": 0.0,
+      "loss": 0.0
+    },
+    {
+      "name": "clean_50000",
+      "signals": 50000,
+      "noise": 0.0,
+      "interception": 0.0,
+      "loss": 0.0
+    },
+    {
+      "name": "noise1_50000",
+      "signals": 50000,
+      "noise": 0.01,
+      "interception": 0.0,
+      "loss": 0.0
+    },
+    {
+      "name": "noise2_50000",
+      "signals": 50000,
+      "noise": 0.02,
+      "interception": 0.0,
+      "loss": 0.0
+    },
+    {
+      "name": "noise3_50000",
+      "signals": 50000,
+      "noise": 0.03,
+      "interception": 0.0,
+      "loss": 0.0
+    },
+    {
+      "name": "eve10_50000",
+      "signals": 50000,
+      "noise": 0.0,
+      "interception": 0.1,
+      "loss": 0.0
+    },
+    {
+      "name": "eve20_50000",
+      "signals": 50000,
+      "noise": 0.0,
+      "interception": 0.2,
+      "loss": 0.0
+    },
+    {
+      "name": "loss30_50000",
+      "signals": 50000,
+      "noise": 0.0,
+      "interception": 0.0,
+      "loss": 0.3
+    },
+    {
+      "name": "clean_100000",
+      "signals": 100000,
+      "noise": 0.0,
+      "interception": 0.0,
+      "loss": 0.0
+    }
+  ],
+  "model_limitations": [
+    "Deterministic simulation only, not physically secure QKD",
+    "Finite-key candidate admission depends on unproved implementation assumptions and leakage budget",
+    "No proof of strongest-link security for QKD/ML-KEM/HKDF combiner",
+    "OpenSSL timings include Python/process/file overhead; compare only within same host",
+    "Neither unbounded ProVerif nor Tamarin proof executed",
+    "The simple fixed Hamming syndrome may reject noisy sessions",
+    "Monte Carlo 95% CI is not eps_secrecy; no unreported hypothesis testing"
+  ]
+}

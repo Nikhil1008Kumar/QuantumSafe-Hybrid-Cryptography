@@ -1,0 +1,22 @@
+{
+  "scenarios": 24,
+  "max_protocol_frames": 8,
+  "max_attacks_per_trace": 1,
+  "states_explored": 1368,
+  "completed_trace_counts": {
+    "REJECT": 965,
+    "STALLED": 192,
+    "ABORT": 14,
+    "ACCEPT": 5
+  },
+  "violations": {},
+  "model_guards": {
+    "auth": true,
+    "session": true,
+    "sequence_stage": true,
+    "policy": true,
+    "role_agreement": true,
+    "key_confirmation": true
+  },
+  "note": "Bounded symbolic-state exploration; NOT an unbounded cryptographic or QKD secrecy proof."
+}

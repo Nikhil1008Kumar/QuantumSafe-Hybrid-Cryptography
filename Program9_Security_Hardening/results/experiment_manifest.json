@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-24T08:27:25.150648+00:00",
+  "program": "9",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+  "repetitions": 2,
+  "audit_only": false,
+  "basis": "Program 8 independent endpoints with experimental nonadaptive syndrome variant",
+  "warnings": [
+    "Fixed syndrome leakage is bounded by a predetermined bit length but not a full QKD security proof.",
+    "Modeled extra verification tag and status disclosures need theorem-level review.",
+    "NumPy seeded bits are not cryptographically unpredictable.",
+    "No unbounded Tamarin or ProVerif proof has been run.",
+    "Concatenation-HKDF security in QKD plus ML-KEM composition is not proved.",
+    "At low noise the simple fixed code may have worse recovery than interactive reconciliation."
+  ]
+}

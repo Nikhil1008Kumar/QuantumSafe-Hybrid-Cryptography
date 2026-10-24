@@ -1,0 +1,18 @@
+{
+  "created_utc": "2026-10-24T08:03:44.083414+00:00",
+  "program": "8",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+  "max_attacks_per_trace": 1,
+  "model_action_alphabet": "enumerated, non-adaptive",
+  "repetitions": 1,
+  "model_only": false,
+  "source_ref": "Program 7 augmented with local mode checks",
+  "warnings": [
+    "No Tamarin/ProVerif proof was executed",
+    "The model is a bounded role/policy abstraction, not the full 7-stage source protocol",
+    "No security proof of quantum finite-key theorem assumptions or hybrid HKDF combiner",
+    "Some independence and EC information-leakage questions remain open"
+  ]
+}

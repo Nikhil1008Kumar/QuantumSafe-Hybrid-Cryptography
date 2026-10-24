@@ -1,0 +1,3 @@
+# The protocol and tests require only Python standard library + OpenSSL >=3.5
+# Graph generation needs matplotlib; CSVs and tests work without it.
+matplotlib>=3.7,<4

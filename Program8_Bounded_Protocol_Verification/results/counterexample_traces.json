@@ -1,0 +1,255 @@
+{
+  "no_authentication_check": {
+    "scenarios": 24,
+    "max_protocol_frames": 8,
+    "max_attacks_per_trace": 1,
+    "states_explored": 2040,
+    "completed_trace_counts": {
+      "REJECT": 813,
+      "STALLED": 192,
+      "ABORT": 126,
+      "ACCEPT": 45
+    },
+    "violations": {
+      "Forged payload was accepted as authentic": {
+        "policy": "HYBRID_REQUIRED",
+        "qkd": false,
+        "kem": false,
+        "keys_equal": false,
+        "trace": [
+          "policy_a:forge"
+        ],
+        "status": "RUNNING"
+      }
+    },
+    "model_guards": {
+      "auth": false,
+      "session": true,
+      "sequence_stage": true,
+      "policy": true,
+      "role_agreement": true,
+      "key_confirmation": true
+    },
+    "note": "Bounded symbolic-state exploration; NOT an unbounded cryptographic or QKD secrecy proof."
+  },
+  "no_session_binding": {
+    "scenarios": 24,
+    "max_protocol_frames": 8,
+    "max_attacks_per_trace": 1,
+    "states_explored": 2040,
+    "completed_trace_counts": {
+      "REJECT": 813,
+      "STALLED": 192,
+      "ABORT": 126,
+      "ACCEPT": 45
+    },
+    "violations": {
+      "Signed message from a different session was accepted": {
+        "policy": "HYBRID_REQUIRED",
+        "qkd": false,
+        "kem": false,
+        "keys_equal": false,
+        "trace": [
+          "policy_a:cross_session_replay"
+        ],
+        "status": "RUNNING"
+      }
+    },
+    "model_guards": {
+      "auth": true,
+      "session": false,
+      "sequence_stage": true,
+      "policy": true,
+      "role_agreement": true,
+      "key_confirmation": true
+    },
+    "note": "Bounded symbolic-state exploration; NOT an unbounded cryptographic or QKD secrecy proof."
+  },
+  "no_sequence_or_stage_check": {
+    "scenarios": 24,
+    "max_protocol_frames": 8,
+    "max_attacks_per_trace": 1,
+    "states_explored": 2712,
+    "completed_trace_counts": {
+      "REJECT": 661,
+      "STALLED": 192,
+      "ABORT": 238,
+      "ACCEPT": 85
+    },
+    "violations": {
+      "A replayed or out-of-order signed message was accepted": {
+        "policy": "HYBRID_REQUIRED",
+        "qkd": false,
+        "kem": false,
+        "keys_equal": false,
+        "trace": [
+          "policy_a:replay_prior"
+        ],
+        "status": "RUNNING"
+      }
+    },
+    "model_guards": {
+      "auth": true,
+      "session": true,
+      "sequence_stage": false,
+      "policy": true,
+      "role_agreement": true,
+      "key_confirmation": true
+    },
+    "note": "Bounded symbolic-state exploration; NOT an unbounded cryptographic or QKD secrecy proof."
+  },
+  "no_policy_check": {
+    "scenarios": 24,
+    "max_protocol_frames": 8,
+    "max_attacks_per_trace": 1,
+    "states_explored": 1416,
+    "completed_trace_counts": {
+      "REJECT": 948,
+      "STALLED": 192,
+      "ABORT": 24,
+      "ACCEPT": 12
+    },
+    "violations": {
+      "Silent fallback violates QKD-required policy": {
+        "policy": "HYBRID_REQUIRED",
+        "qkd": false,
+        "kem": true,
+        "keys_equal": true,
+        "trace": [
+          "policy_a:deliver",
+          "policy_b:deliver",
+          "report_a:deliver",
+          "report_b:deliver",
+          "mode_a:deliver",
+          "mode_b:deliver",
+          "confirm_a:deliver",
+          "confirm_b:deliver"
+        ],
+        "status": "ACCEPT"
+      },
+      "Alice/Bob finished with different modes": {
+        "policy": "HYBRID_REQUIRED",
+        "qkd": false,
+        "kem": true,
+        "keys_equal": true,
+        "trace": [
+          "policy_a:deliver",
+          "policy_b:deliver",
+          "report_a:deliver",
+          "report_b:deliver",
+          "mode_a:deliver",
+          "mode_b:peer_mode_conflict",
+          "confirm_a:deliver",
+          "confirm_b:deliver"
+        ],
+        "status": "ACCEPT"
+      },
+      "PQC-only policy selected another mode": {
+        "policy": "PQC_ONLY",
+        "qkd": true,
+        "kem": true,
+        "keys_equal": true,
+        "trace": [
+          "policy_a:deliver",
+          "policy_b:deliver",
+          "report_a:deliver",
+          "report_b:deliver",
+          "mode_a:deliver",
+          "mode_b:deliver",
+          "confirm_a:deliver",
+          "confirm_b:deliver"
+        ],
+        "status": "ACCEPT"
+      }
+    },
+    "model_guards": {
+      "auth": true,
+      "session": true,
+      "sequence_stage": true,
+      "policy": false,
+      "role_agreement": false,
+      "key_confirmation": true
+    },
+    "note": "Bounded symbolic-state exploration; NOT an unbounded cryptographic or QKD secrecy proof."
+  },
+  "no_mode_agreement_check": {
+    "scenarios": 24,
+    "max_protocol_frames": 8,
+    "max_attacks_per_trace": 1,
+    "states_explored": 1416,
+    "completed_trace_counts": {
+      "REJECT": 946,
+      "STALLED": 192,
+      "ABORT": 28,
+      "ACCEPT": 10
+    },
+    "violations": {
+      "Alice/Bob finished with different modes": {
+        "policy": "HYBRID_REQUIRED",
+        "qkd": true,
+        "kem": true,
+        "keys_equal": true,
+        "trace": [
+          "policy_a:deliver",
+          "policy_b:deliver",
+          "report_a:deliver",
+          "report_b:deliver",
+          "mode_a:deliver",
+          "mode_b:peer_mode_conflict",
+          "confirm_a:deliver",
+          "confirm_b:deliver"
+        ],
+        "status": "ACCEPT"
+      }
+    },
+    "model_guards": {
+      "auth": true,
+      "session": true,
+      "sequence_stage": true,
+      "policy": true,
+      "role_agreement": false,
+      "key_confirmation": true
+    },
+    "note": "Bounded symbolic-state exploration; NOT an unbounded cryptographic or QKD secrecy proof."
+  },
+  "no_key_confirmation": {
+    "scenarios": 24,
+    "max_protocol_frames": 8,
+    "max_attacks_per_trace": 1,
+    "states_explored": 1368,
+    "completed_trace_counts": {
+      "REJECT": 960,
+      "STALLED": 192,
+      "ABORT": 14,
+      "ACCEPT": 10
+    },
+    "violations": {
+      "Accepted despite failed key confirmation": {
+        "policy": "HYBRID_REQUIRED",
+        "qkd": true,
+        "kem": true,
+        "keys_equal": false,
+        "trace": [
+          "policy_a:deliver",
+          "policy_b:deliver",
+          "report_a:deliver",
+          "report_b:deliver",
+          "mode_a:deliver",
+          "mode_b:deliver",
+          "confirm_a:deliver",
+          "confirm_b:deliver"
+        ],
+        "status": "ACCEPT"
+      }
+    },
+    "model_guards": {
+      "auth": true,
+      "session": true,
+      "sequence_stage": true,
+      "policy": true,
+      "role_agreement": true,
+      "key_confirmation": false
+    },
+    "note": "Bounded symbolic-state exploration; NOT an unbounded cryptographic or QKD secrecy proof."
+  }
+}

@@ -1,0 +1,11 @@
+scenario,trials,hybrid,pqc_only,aborts,success_rate_percent,median_total_ms,p95_total_ms,median_wire_bytes,mean_qkd_bound_bits
+PQC_only,8,0,8,0,100.0,1441.59205,1531.0229949999998,47025.0,0
+Hybrid_clean,8,8,0,0,100.0,1413.1381999999999,1584.885565,47053.0,729
+Preferred_clean,8,8,0,0,100.0,1251.69535,1438.6224,47057.0,729
+Preferred_noise_1pct,8,8,0,0,100.0,1260.4596000000001,1393.952585,47057.0,729
+Preferred_noise_3pct,8,0,8,0,100.0,1308.8219,1354.1240699999998,47093.0,729
+Required_noise_3pct,8,0,0,8,0.0,,,,
+Preferred_Eve_20pct,8,0,8,0,100.0,1279.1992,1417.02125,47095.0,0
+Required_Eve_20pct,8,0,0,8,0.0,,,,
+Preferred_short_500,8,0,8,0,100.0,1433.87705,1551.0441,47101.0,0
+Required_short_500,8,0,0,8,0.0,,,,

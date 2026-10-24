@@ -1,0 +1,6 @@
+case,policy,expected,actual,passed,total_wall_ms,on_wire_bytes
+clean_preferred,HYBRID_PREFERRED,HYBRID,HYBRID,True,2190.6685,47057
+noise3_preferred,HYBRID_PREFERRED,PQC_ONLY,PQC_ONLY,True,2457.935,47093
+noise3_required,HYBRID_REQUIRED,ABORT,ABORT,True,,
+short_required,HYBRID_REQUIRED,ABORT,ABORT,True,,
+pqc_only,PQC_ONLY,PQC_ONLY,PQC_ONLY,True,1717.5683,47025

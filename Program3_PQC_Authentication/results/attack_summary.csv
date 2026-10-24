@@ -1,0 +1,11 @@
+attack,blocked,attempts,blocked_pct
+bad_client_signature,15,15,100.0
+client_mode_downgrade,15,15,100.0
+client_nonce_change,15,15,100.0
+bad_server_signature,15,15,100.0
+server_nonce_change,15,15,100.0
+server_kem_public_change,15,15,100.0
+bad_client_finish_signature,15,15,100.0
+kem_ciphertext_change,15,15,100.0
+server_mac_change,15,15,100.0
+client_mac_change,15,15,100.0

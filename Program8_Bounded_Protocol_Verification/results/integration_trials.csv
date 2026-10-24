@@ -1,0 +1,8 @@
+scenario,rep,mode,qkd_status,signed_frames,wire_bytes,elapsed_ms,key_bound_bits,ec_queries,record_ok
+clean_required,0,HYBRID,MODEL_ACCEPT,49,274609,7424.146,729,740,True
+clean_preferred,0,HYBRID,MODEL_ACCEPT,49,274613,6747.752,729,740,True
+noise3_preferred,0,PQC_ONLY,ABORT_EC_BUDGET,108,573799,14065.918,729,2010,True
+noise3_required,0,ABORT,ABORT_EC_BUDGET,146,760951,19357.42,729,2401,False
+short_preferred,0,PQC_ONLY,ABORT_FINITE_KEY,28,134551,4075.455,0,10,True
+short_required,0,ABORT,ABORT_FINITE_KEY,28,134541,4293.488,0,10,False
+pqc_only,0,PQC_ONLY,NOT_RUN,6,29209,1404.684,0,0,True

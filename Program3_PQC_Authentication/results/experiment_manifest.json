@@ -1,0 +1,21 @@
+{
+  "experiment": "Program3-ML-DSA65-ML-KEM768-authenticated-handshake",
+  "date_utc": "2026-10-24T06:09:35.647066+00:00",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "session_trials": 75,
+  "attack_trials_per_type": 15,
+  "algorithm_parameters": {
+    "mldsa": "ML-DSA-65",
+    "mlkem": "ML-KEM-768",
+    "kem_ciphertext_raw_bytes": 1088,
+    "kem_shared_secret_bytes": 32,
+    "mldsa_signature_raw_bytes": 3309
+  },
+  "timing_scope": "Python orchestration + OpenSSL CLI process startup + temp file I/O + crypto",
+  "wire_scope": "UTF-8 canonical JSON with Base64 encodings, 5 messages",
+  "randomness": "OS CSPRNG/OpenSSL, not deterministic; reruns yield different times and bytes",
+  "not_included": "BB84, hybrid combiner, AES-GCM, live network, formal protocol proof",
+  "security_limitations": "pinned public keys in-process; disk temporary secret keys; research-only"
+}

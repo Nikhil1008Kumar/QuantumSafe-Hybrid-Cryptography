@@ -1,0 +1,4 @@
+transmitted_signals,interception_probability,trials,expected_qber,mean_test_bits,fraction_zero_observed_qber,fraction_qber_at_or_below_11pct,mean_retained_raw_mismatches_diagnostic
+500,0.1,1000,0.025,24.556,0.552,0.985,5.734
+500,0.4,1000,0.1,24.502,0.072,0.565,22.175
+500,0.6,1000,0.15,24.618,0.023,0.246,34.083

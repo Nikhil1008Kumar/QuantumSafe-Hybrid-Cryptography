@@ -1,0 +1,83 @@
+{
+  "program": "Program6_Authenticated_BB84",
+  "utc_created": "2026-10-24T07:18:45.437864+00:00",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+  "seed_base": 20261024,
+  "repetitions_per_scenario": 5,
+  "tamper_repetitions_per_stage": 3,
+  "scenarios": [
+    {
+      "name": "clean_preferred",
+      "n": 50000,
+      "noise": 0.0,
+      "eve": 0.0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "noise1_preferred",
+      "n": 50000,
+      "noise": 0.01,
+      "eve": 0.0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "noise3_preferred",
+      "n": 50000,
+      "noise": 0.03,
+      "eve": 0.0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "eve20_preferred",
+      "n": 50000,
+      "noise": 0.0,
+      "eve": 0.2,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "short_preferred",
+      "n": 500,
+      "noise": 0.0,
+      "eve": 0.0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "clean_required",
+      "n": 50000,
+      "noise": 0,
+      "eve": 0,
+      "policy": "HYBRID_REQUIRED"
+    },
+    {
+      "name": "noise3_required",
+      "n": 50000,
+      "noise": 0.03,
+      "eve": 0,
+      "policy": "HYBRID_REQUIRED"
+    },
+    {
+      "name": "short_required",
+      "n": 500,
+      "noise": 0,
+      "eve": 0,
+      "policy": "HYBRID_REQUIRED"
+    },
+    {
+      "name": "pqc_only",
+      "n": 50000,
+      "noise": 0,
+      "eve": 0,
+      "policy": "PQC_ONLY"
+    }
+  ],
+  "limitations": [
+    "ideal simulated quantum channel",
+    "NumPy seeded simulated bits",
+    "locally executed ML-DSA via subprocess",
+    "EC parity batches authenticated only after simulation",
+    "no live independent Alice and Bob network endpoints",
+    "not a complete cryptographic proof or physically validated QKD link"
+  ]
+}

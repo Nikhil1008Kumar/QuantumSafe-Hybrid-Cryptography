@@ -1,0 +1,8 @@
+configuration,states_explored,distinct_violations,accepted_traces,rejected_traces,stalled_traces
+intact_model,1368,0,5,965,192
+no_authentication_check,2040,1,45,813,192
+no_session_binding,2040,1,45,813,192
+no_sequence_or_stage_check,2712,1,85,661,192
+no_policy_check,1416,3,12,948,192
+no_mode_agreement_check,1416,1,10,946,192
+no_key_confirmation,1368,1,10,960,192

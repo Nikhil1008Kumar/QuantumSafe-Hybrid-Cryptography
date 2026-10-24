@@ -1,0 +1,10 @@
+scenario,trials,hybrid,pqc_only,abort,median_signed_frames,median_signed_classical_bytes,median_handshake_ms,recovered_records
+clean_preferred,5,5,0,0,30,264634,4882.483,5
+noise1_preferred,5,5,0,0,38,358320,5528.313,5
+noise3_preferred,5,0,5,0,54,561708,7677.34,5
+eve20_preferred,5,0,5,0,12,86732,2079.252,5
+short_preferred,5,0,5,0,17,84192,2712.291,5
+clean_required,5,5,0,0,30,264630,4723.763,5
+noise3_required,5,0,0,5,53,544318,7751.792,0
+short_required,5,0,0,5,17,84182,2792.864,0
+pqc_only,5,0,5,0,4,19960,1085.467,5

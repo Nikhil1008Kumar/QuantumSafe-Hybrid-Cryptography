@@ -1,0 +1,15 @@
+{
+  "protocol": "research-bb84-pqc-aead-v1",
+  "studies": 10,
+  "total_sessions": 80,
+  "repetitions_per_scenario": 8,
+  "base_seed": 20261024,
+  "python": "3.11.9",
+  "numpy": "2.4.6",
+  "matplotlib": "3.11.1",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+  "random_seed_note": "QKD uses deterministic NumPy PRNG. NOT real quantum randomness.",
+  "security_note": "No authenticated QKD message exchange or general combiner proof in prototype.",
+  "timing_note": "Includes OpenSSL CLI startup, filesystem, and QKD simulation. No networking."
+}

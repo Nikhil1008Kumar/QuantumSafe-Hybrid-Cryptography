@@ -1,0 +1,76 @@
+{
+  "created_at_utc": "2026-10-24T07:45:39.392703+00:00",
+  "program": "7",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "seed": 20261024,
+  "repetitions": 2,
+  "attack_repetitions": 1,
+  "scenarios": [
+    {
+      "name": "clean_preferred",
+      "signals": 50000,
+      "noise": 0,
+      "eve": 0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "noise1_preferred",
+      "signals": 50000,
+      "noise": 0.01,
+      "eve": 0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "noise3_preferred",
+      "signals": 50000,
+      "noise": 0.03,
+      "eve": 0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "eve20_preferred",
+      "signals": 50000,
+      "noise": 0,
+      "eve": 0.2,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "short_preferred",
+      "signals": 500,
+      "noise": 0,
+      "eve": 0,
+      "policy": "HYBRID_PREFERRED"
+    },
+    {
+      "name": "clean_required",
+      "signals": 50000,
+      "noise": 0,
+      "eve": 0,
+      "policy": "HYBRID_REQUIRED"
+    },
+    {
+      "name": "noise3_required",
+      "signals": 50000,
+      "noise": 0.03,
+      "eve": 0,
+      "policy": "HYBRID_REQUIRED"
+    },
+    {
+      "name": "short_required",
+      "signals": 500,
+      "noise": 0,
+      "eve": 0,
+      "policy": "HYBRID_REQUIRED"
+    },
+    {
+      "name": "pqc_only",
+      "signals": 50000,
+      "noise": 0,
+      "eve": 0,
+      "policy": "PQC_ONLY"
+    }
+  ],
+  "notes": "Pure software QKD. Deterministic NumPy randomness not a CSPRNG; no hardware or formal composable proof."
+}
