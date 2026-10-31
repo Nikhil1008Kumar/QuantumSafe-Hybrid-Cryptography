@@ -1,0 +1,7 @@
+/reproducible_evaluation/finite_key_sensitivity_v1.py -text whitespace=cr-at-eol
+/reproducible_evaluation/plot_finite_key_sensitivity_v2.py -text whitespace=cr-at-eol
+/reproducible_evaluation/results/finite_key_sensitivity_full100/trial_data.csv -text whitespace=cr-at-eol
+/reproducible_evaluation/results/finite_key_sensitivity_full100/summary.csv -text whitespace=cr-at-eol
+/reproducible_evaluation/results/finite_key_sensitivity_full100/manifest.json -text whitespace=cr-at-eol
+/reproducible_evaluation/results/finite_key_sensitivity_full100/SHA256SUMS.txt -text whitespace=cr-at-eol
+/reproducible_evaluation/results/finite_key_sensitivity_full100/figures_v3/SHA256SUMS.txt -text whitespace=cr-at-eol

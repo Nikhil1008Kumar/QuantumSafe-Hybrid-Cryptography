@@ -1,0 +1,176 @@
+{
+  "study": "Issue 5 finite-key full-protocol sensitivity v1",
+  "design": "Predeclared one-factor-at-a-time sweeps; EC-cap sweep at 1% noise",
+  "repetitions": 100,
+  "master_seed": 20261031,
+  "seed_rule": "SHA256(issue5/v1|master_seed|rep), first eight bytes big-endian",
+  "seed_note": "Same seed schedule across scenarios; not identical physical noise realizations",
+  "git_head_at_run": "21cc26035572e6fe434b79e35f3647049415dd4d",
+  "script_sha256": "aea28909e66ec6b6a8add0dbbb3fd03d8aa5650fdd3a03005435c4f1316760ae",
+  "baseline": {
+    "transmitted_signals": 50000,
+    "target_key_bits": 9000,
+    "target_test_bits": 9000,
+    "p_z": 0.5,
+    "intercept_probability": 0.0,
+    "noise_probability": 0.0,
+    "loss_probability": 0.0,
+    "q_tolerance": 0.04,
+    "eps_secrecy": 1e-10,
+    "eps_correctness": 1e-10,
+    "min_final_key_bits": 256,
+    "reconciliation_passes": 6,
+    "reconciliation_block_size": 24,
+    "ec_leakage_cap_fraction": 0.4,
+    "output_key_bits": 256
+  },
+  "cases": [
+    {
+      "scenario": "baseline_clean",
+      "overrides": {}
+    },
+    {
+      "scenario": "block_20000",
+      "overrides": {
+        "transmitted_signals": 20000,
+        "target_key_bits": 3600,
+        "target_test_bits": 3600
+      }
+    },
+    {
+      "scenario": "block_35000",
+      "overrides": {
+        "transmitted_signals": 35000,
+        "target_key_bits": 6300,
+        "target_test_bits": 6300
+      }
+    },
+    {
+      "scenario": "block_70000",
+      "overrides": {
+        "transmitted_signals": 70000,
+        "target_key_bits": 12600,
+        "target_test_bits": 12600
+      }
+    },
+    {
+      "scenario": "test_3000",
+      "overrides": {
+        "target_test_bits": 3000
+      }
+    },
+    {
+      "scenario": "test_6000",
+      "overrides": {
+        "target_test_bits": 6000
+      }
+    },
+    {
+      "scenario": "test_11000",
+      "overrides": {
+        "target_test_bits": 11000
+      }
+    },
+    {
+      "scenario": "noise_1pct",
+      "overrides": {
+        "noise_probability": 0.01
+      }
+    },
+    {
+      "scenario": "noise_2pct",
+      "overrides": {
+        "noise_probability": 0.02
+      }
+    },
+    {
+      "scenario": "noise_3pct",
+      "overrides": {
+        "noise_probability": 0.03
+      }
+    },
+    {
+      "scenario": "noise_4pct",
+      "overrides": {
+        "noise_probability": 0.04
+      }
+    },
+    {
+      "scenario": "loss_10pct",
+      "overrides": {
+        "loss_probability": 0.1
+      }
+    },
+    {
+      "scenario": "loss_20pct",
+      "overrides": {
+        "loss_probability": 0.2
+      }
+    },
+    {
+      "scenario": "loss_30pct",
+      "overrides": {
+        "loss_probability": 0.3
+      }
+    },
+    {
+      "scenario": "noise1_cap20",
+      "overrides": {
+        "noise_probability": 0.01,
+        "ec_leakage_cap_fraction": 0.2
+      }
+    },
+    {
+      "scenario": "noise1_cap30",
+      "overrides": {
+        "noise_probability": 0.01,
+        "ec_leakage_cap_fraction": 0.3
+      }
+    },
+    {
+      "scenario": "noise1_cap45",
+      "overrides": {
+        "noise_probability": 0.01,
+        "ec_leakage_cap_fraction": 0.45
+      }
+    },
+    {
+      "scenario": "noise1_cap50",
+      "overrides": {
+        "noise_probability": 0.01,
+        "ec_leakage_cap_fraction": 0.5
+      }
+    },
+    {
+      "scenario": "secrecy_1e8",
+      "overrides": {
+        "eps_secrecy": 1e-08
+      }
+    },
+    {
+      "scenario": "secrecy_1e12",
+      "overrides": {
+        "eps_secrecy": 1e-12
+      }
+    },
+    {
+      "scenario": "correctness_1e6",
+      "overrides": {
+        "eps_correctness": 1e-06
+      }
+    },
+    {
+      "scenario": "correctness_1e14",
+      "overrides": {
+        "eps_correctness": 1e-14
+      }
+    }
+  ],
+  "limitations": [
+    "Model admission is not a composable QKD security proof",
+    "Wilson intervals describe Monte Carlo uncertainty only",
+    "Some aborts occur before QBER, leakage or finite-bound evaluation",
+    "Privileged Z-error diagnostics are never admission-policy inputs",
+    "Measured runtime is machine-dependent"
+  ]
+}
