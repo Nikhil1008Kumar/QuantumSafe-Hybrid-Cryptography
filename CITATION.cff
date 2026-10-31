@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this research software or its experimental results, please cite this repository."
+type: software
+title: "Finite-Key-Aware Admission and Authenticated Fallback in Hybrid BB84–Post-Quantum Communication"
+authors:
+  - given-names: "Chandra Kanta"
+    family-names: "Samal"
+  - given-names: "Nikhil"
+    family-names: "Kumar"
+  - given-names: "Om"
+    family-names: "Maurya"
+  - given-names: "Laxmi"
+    family-names: "Narain"
+  - given-names: "Rameshwar"
+    family-names: "Chauhan"
+  - given-names: "Mehtab"
+    family-names: "Alam"
+repository-code: "https://github.com/Nikhil1008Kumar/QuantumSafe-Hybrid-Cryptography"
+keywords:
+  - quantum key distribution
+  - BB84
+  - finite-key analysis
+  - post-quantum cryptography
+  - ML-KEM
+  - ML-DSA
+  - authenticated fallback
+  - hybrid cryptography

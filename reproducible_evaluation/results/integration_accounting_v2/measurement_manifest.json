@@ -1,0 +1,10 @@
+{
+  "master_seed": 20261024,
+  "executions": 100,
+  "paired_trials": 50,
+  "python": "3.11.9",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "openssl": "OpenSSL 3.5.7 9 Jun 2026 (Library: OpenSSL 3.5.7 9 Jun 2026)",
+  "original_integration_csv_sha256": "80f93d2a61569d481d9d2fff4b3fd633f466cedbae6abb0228ded7cda209073c",
+  "communication_metric": "modeled serialized bytes, not physical network traffic"
+}

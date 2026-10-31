@@ -1,0 +1,11 @@
+# Python-generated cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local Python environments
+.venv/
+venv/
+
+# Temporary backup files
+*.bak
