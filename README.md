@@ -92,4 +92,16 @@ A versioned research release and archival DOI are planned. No archival DOI is cl
 
 ## License
 
-License selection and repository distribution terms are pending final review.# QuantumSafe-Hybrid-Cryptography
+License selection and repository distribution terms are pending final review.
+
+<!-- ISSUE5-SENSITIVITY:START -->
+## Verified finite-key sensitivity study (Issue 5)
+
+The reproducible BB84 admission sensitivity evaluation comprises **2,200 simulator trials** across **22 predeclared configurations** (100 per configuration). The archived trial data, scenario-level results, experiment manifest, SHA-256 checksums, and final publication figures are under [`reproducible_evaluation/results/finite_key_sensitivity_full100/`](reproducible_evaluation/results/finite_key_sensitivity_full100/). The verified local research checkpoint is `9095e3a` (2026-10-31).
+
+At the tested settings, model-admission counts include **100/100** for the noise-free baseline, **99/100** at 2% channel noise, **0/100** at 3% noise, and **0/100** with 30% detection loss. At 1% noise, the EC leakage-budget sweep admits **0/100** at a 20% cap, **100/100** at 30%, **100/100** at 40%, **100/100** at 45%, and **0/100** at 50%. Abort causes and 95% Wilson intervals are recorded in the summary CSV.
+
+Reproduction scripts: [`finite_key_sensitivity_v1.py`](reproducible_evaluation/finite_key_sensitivity_v1.py) and [`plot_finite_key_sensitivity_v2.py`](reproducible_evaluation/plot_finite_key_sensitivity_v2.py). Final figures are in [`figures_v3/`](reproducible_evaluation/results/finite_key_sensitivity_full100/figures_v3/). The earlier 5,000-trial QKD comparison and 100 integration executions are separate studies and are **not pooled** with these 2,200 sensitivity trials.
+
+**Scope:** These are admission outcomes under an idealized, seeded BB84 simulation and a candidate finite-key calculation—not deployed-QKD measurements, a composable end-to-end security proof, or cryptographic failure-probability confidence intervals. The 95% Wilson intervals characterize Monte Carlo admission-rate uncertainty only. Reconciliation counts and predeclared leakage caps are model-specific, and stronger security claims require independent theorem-assumption and protocol verification.
+<!-- ISSUE5-SENSITIVITY:END -->
